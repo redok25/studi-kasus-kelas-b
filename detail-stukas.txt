@@ -1,0 +1,14 @@
+-Buku alamat
+
+ *Layouting -> Minggu sekarang
+ *Masukin Logic -> Minggu selanjutnya
+
+Fitur:
+ 1. Buat Kontak
+ 2. Edit Kontak
+ 3. Hapus Kontak
+ 4. Login
+ 5. Register
+
+Databse: MySQL
+Library: Bootstrap
