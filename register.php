@@ -10,7 +10,7 @@
                         <h3 class="mt-2 mb-2">Form Register</h3>
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form action="proses/register.php" method="POST">
                             <div class="mb-3">
                                 <label for="inputUsername" class="form-label">Username</label>
                                 <input type="text" name="username" class="form-control" id="inputUsername">
@@ -29,24 +29,14 @@
                             <div class="mb-3">
                                 <label for="inputPassword" class="form-label">Password</label>
                                 <input type="password" name="password" class="form-control" id="inputPassword">
-                                <div class="form-check">
-                                  <input class="form-check-input" type="checkbox" onclick="lihatPassword('inputPassword')" id="ts_1">
-                                  <label class="form-check-label" for="ts_1">
-                                    Tampilkan Password
-                                  </label>
-                                </div>
+                                <input type="checkbox" onclick="lihatPassword('inputPassword')"> Tampilkan Password
                             </div>
 
 
                             <div class="mb-3">
                                 <label for="inputUlangPassword" class="form-label">Ulangi Password</label>
                                 <input type="password" name="ulang_password" class="form-control" id="inputUlangPassword">
-                                <div class="form-check">
-                                  <input class="form-check-input" type="checkbox" onclick="lihatPassword('inputUlangPassword')" id="ts_1">
-                                  <label class="form-check-label" for="ts_1">
-                                    Tampilkan Password
-                                  </label>
-                                </div>
+                                <input type="checkbox" onclick="lihatPassword('inputUlangPassword')"> Tampilkan Password
                             </div>
                             <hr>
 

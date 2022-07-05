@@ -1,14 +1,14 @@
 -Buku alamat
 
- *Layouting -> Minggu sekarang
- *Masukin Logic -> Minggu selanjutnya
+ *Layouting -> Sudah
+ *Masukin Logic -> Minggu Sekarang
 
 Fitur:
- 1. Buat Kontak
- 2. Edit Kontak
- 3. Hapus Kontak
- 4. Login
- 5. Register
+ 1. Buat Kontak (Done)
+ 2. Edit Kontak (Done)
+ 3. Hapus Kontak (Done)
+ 4. Login (Done)
+ 5. Register (Done)
 
 Databse: MySQL
 Library: Bootstrap

@@ -1,4 +1,12 @@
 <?php include('header.php')  ?>
+<?php
+
+$id = $_GET['id'];
+$sql = "SELECT * FROM kontak WHERE id = '$id'";
+$result = $conn->query($sql);
+$result = $result->fetch_assoc();
+
+?>
 
 <body>
 
@@ -12,20 +20,22 @@
                         <h3 class="mt-2 mb-2">Edit Data Kontak</h3>
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form action="proses/edit-kontak.php" method="POST">
+                            <input type="hidden" value="<?php echo $result['id'] ?>" name="id">
+
                             <div class="mb-3">
                                 <label for="inputNAma" class="form-label">Nama</label>
-                                <input type="text" name="nama" class="form-control" id="inputNAma">
+                                <input type="text" name="nama" value="<?php echo $result['nama'] ?>" class="form-control" id="inputNAma">
                             </div>
 
                             <div class="mb-3">
                                 <label for="inputNoHP" class="form-label">No. HP</label>
-                                <input type="text" name="no_hp" class="form-control" id="inputNoHP">
+                                <input type="text" name="no_hp" value="<?php echo $result['no_hp'] ?>" class="form-control" id="inputNoHP">
                             </div>
 
                             <div class="mb-3">
                                 <label for="inputAlamat" class="form-label">Alamat</label>
-                                <textarea name="alamat" class="form-control" id="inputAlamat"></textarea>
+                                <textarea name="alamat" class="form-control" id="inputAlamat"><?php echo $result['alamat'] ?></textarea>
                             </div>
 
                             <button type="submit" class="btn btn-primary">Simpan Data</button>

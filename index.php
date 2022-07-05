@@ -26,46 +26,26 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Redho Harli</td>
-                                    <td>081234567890</td>
-                                    <td>Yogyakarta</td>
-                                    <td>
-                                        <a href="edit-kontak.php" class="btn btn-primary"><i class="fa-solid fa-pen"></i> Edit</a>
-                                        <a href="hapus-kontak.php" class="btn btn-danger"><i class="fa-solid fa-trash"></i> Hapus</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Redho Harli</td>
-                                    <td>081234567890</td>
-                                    <td>Yogyakarta</td>
-                                    <td>
-                                        <a href="edit-kontak.php" class="btn btn-primary"><i class="fa-solid fa-pen"></i> Edit</a>
-                                        <a href="hapus-kontak.php" class="btn btn-danger"><i class="fa-solid fa-trash"></i> Hapus</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Redho Harli</td>
-                                    <td>081234567890</td>
-                                    <td>Yogyakarta</td>
-                                    <td>
-                                        <a href="edit-kontak.php" class="btn btn-primary"><i class="fa-solid fa-pen"></i> Edit</a>
-                                        <a href="hapus-kontak.php" class="btn btn-danger"><i class="fa-solid fa-trash"></i> Hapus</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>Redho Harli</td>
-                                    <td>081234567890</td>
-                                    <td>Yogyakarta</td>
-                                    <td>
-                                        <a href="edit-kontak.php" class="btn btn-primary"><i class="fa-solid fa-pen"></i> Edit</a>
-                                        <a href="hapus-kontak.php" class="btn btn-danger"><i class="fa-solid fa-trash"></i> Hapus</a>
-                                    </td>
-                                </tr>
+                                <?php
+
+                                $sql = "SELECT * FROM kontak";
+                                $result = $conn->query($sql);
+                                $no = 1;
+
+                                ?>
+                                <?php while ($row = $result->fetch_assoc()) : ?>
+                                    <tr>
+                                        <td><?php echo $no++ ?></td>
+                                        <td><?php echo $row['nama'] ?></td>
+                                        <td><?php echo $row['no_hp'] ?></td>
+                                        <td><?php echo $row['alamat'] ?></td>
+                                        <td>
+                                            <a href="edit-kontak.php?id=<?php echo $row['id'] ?>" class="btn btn-primary"><i class="fa-solid fa-pen"></i> Edit</a>
+                                            <a href="proses/hapus-kontak.php?id=<?php echo $row['id'] ?>" class="btn btn-danger"><i class="fa-solid fa-trash"></i> Hapus</a>
+                                        </td>
+                                    </tr>
+                                <?php endwhile; ?>
+
                             </tbody>
                         </table>
 

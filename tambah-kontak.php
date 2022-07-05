@@ -12,7 +12,7 @@
                         <h3 class="mt-2 mb-2">Tambah Data Kontak</h3>
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form action="proses/tambah-kontak.php" method="POST">
                             <div class="mb-3">
                                 <label for="inputNAma" class="form-label">Nama</label>
                                 <input type="text" name="nama" class="form-control" id="inputNAma">
