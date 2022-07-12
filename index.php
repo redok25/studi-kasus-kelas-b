@@ -1,5 +1,15 @@
 <?php include('header.php')  ?>
 
+<?php
+
+if (empty($_SESSION['user'])) {
+    $_SESSION['notif'] = 'Akses dilarang, silahkan login terlebih dahulu';
+    header("Location: login.php");
+    die();
+}
+
+?>
+
 <body>
 
     <?php include('navbar.php')  ?>
@@ -60,6 +70,15 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+
+    <?php if (!empty($_SESSION['notif'])) : ?>
+        <script>
+            alert('<?php echo $_SESSION['notif'] ?>')
+        </script>
+        <?php unset($_SESSION['notif']); ?>
+    <?php endif; ?>
+
+
 </body>
 
 

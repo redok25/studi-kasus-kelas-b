@@ -11,6 +11,7 @@ $sql = "UPDATE `kontak` SET `nama`='$nama',`no_hp`='$no_hp',`alamat`='$alamat' W
 
 
 if ($conn->query($sql) === TRUE) {
+    $_SESSION['notif'] = 'Selamat kamu berhasil mengubah data kontak!';
     header("Location: ../index.php");
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;

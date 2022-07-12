@@ -9,6 +9,11 @@ Fitur:
  3. Hapus Kontak (Done)
  4. Login (Done)
  5. Register (Done)
+ 6. Session {
+    Notif (Done)
+    Hak Akses (Done)
+    Logout (Done)
+ }
 
 Databse: MySQL
 Library: Bootstrap

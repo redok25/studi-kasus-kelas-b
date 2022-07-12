@@ -11,7 +11,7 @@
                 </li>
             </ul>
             <form class="d-flex" role="search">
-                <a href="login.php" class="btn btn-outline-success">Login/Logout</a>
+                <a href="proses/logout.php" class="btn btn-outline-success">Logout</a>
             </form>
         </div>
     </div>

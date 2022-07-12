@@ -1,4 +1,15 @@
 <?php include('header.php')  ?>
+
+<?php
+
+if (empty($_SESSION['user'])) {
+    $_SESSION['notif'] = 'Akses dilarang, silahkan login terlebih dahulu';
+    header("Location: login.php");
+    die();
+}
+
+?>
+
 <?php
 
 $id = $_GET['id'];
